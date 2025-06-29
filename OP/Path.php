@@ -19,12 +19,15 @@ namespace OP;
 //	...
 $method = 'Path';
 
+//	Get app root
+$app_root = OP::MetaPath('app:/');
+
 //	Meta path
 $args   = 'app:/foo/bar/';
-$result = _ROOT_APP_.'foo/bar/';
+$result = $app_root.'foo/bar/';
 $ci->Set($method, $result, $args);
 
 //	Full path
-$args   = _ROOT_APP_.'foo/bar/';
+$args   = $app_root.'/foo/bar/';
 $result = 'app:/foo/bar/';
 $ci->Set($method, $result, $args);
