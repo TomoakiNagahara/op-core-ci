@@ -59,19 +59,8 @@ $ci->Set('Get', $result, $args);
 
 //	List
 $args   = [];
-$result = [
-	'git'      => RootPath('git'),
-	'real'     => RootPath('real'),
-	'doc'      => RootPath('doc'),
-	'app'      => RootPath('app'),
-	'asset'    => RootPath('asset'),
-	'op'       => RootPath('op'),
-	'core'     => RootPath('core'),
-	'unit'     => RootPath('unit'),
-	'layout'   => RootPath('layout'),
-	'template' => RootPath('template'),
-	'etc'      => '/etc/',
-];
+$result = RootPath();
+$result['etc'] = '/etc/';
 $ci->Set('List', $result, $args);
 
 //	Encode
