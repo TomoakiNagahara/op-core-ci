@@ -45,8 +45,8 @@ $result = 'OP\UNIT\Layout';
 $ci->Set('Layout', $result, $args);
 
 //	Notice
-$args   = null;
-$result = 'OP\Error';
+$args   = '(empty)';
+$result = 'Notice: (empty)';
 $ci->Set('Notice', $result, $args);
 
 //	MetaPath
