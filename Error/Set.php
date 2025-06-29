@@ -21,7 +21,7 @@ $method = 'Set';
 
 //	...
 $result = 'Notice: (empty)';
-$args   = null;
+$args   = '(empty)';
 $ci->Set($method, $result, $args);
 
 //	...
