@@ -28,7 +28,7 @@ $ci = OP()->Unit()->CI()->Config();
 
 //	init
 $user_name = get_current_user();
-$file_name = OP::MetaPath("core:/testcase/{$attach_file_name}");
+$file_name = _ROOT_CORE_ . "/ci/EMail/{$attach_file_name}";
 
 //	From
 $result =  null;
