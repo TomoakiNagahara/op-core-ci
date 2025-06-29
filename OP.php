@@ -27,9 +27,6 @@ foreach( glob(__DIR__.'/OP/*.php') as $path ){
 	require_once($path);
 }
 
-//	...
-require_once(__DIR__.'/QQL.php');
-
 //	Router
 $args   = null;
 $result = 'OP\UNIT\Router';
@@ -66,11 +63,6 @@ $ci->Set('Config', $result, $args);
 $args   = '';
 $result = 'OP\Env';
 $ci->Set('Env', $result, $args);
-
-//	_Function
-$args   = ['isInt',1];
-$result =  true;
-$ci->Set('_Function', $result, $args);
 
 //	Unit
 $args   = 'Dump';
