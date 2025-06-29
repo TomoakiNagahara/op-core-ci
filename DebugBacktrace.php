@@ -24,8 +24,8 @@ $ci = OP()->Unit()->CI()->Config();
 
 //  Auto
 $backtrace  = [
-	'file'  => __FILE__,
-	'line'  => __LINE__,
+	'file'  =>  OP::MetaPath('core:/ci/DebugBacktrace.php'),
+	'line'  =>  100,
 	'class' => 'OP\UNIT\CI',
 	'type'  => '->',
 	'function' => 'Auto',
@@ -33,7 +33,7 @@ $backtrace  = [
 ];
 $backtraces[] = $backtrace;
 $args   = [$backtraces];
-$result = 'git:asset/core/ci/DebugBacktrace.php  27 - OP\UNIT\CI->Auto("CI",0,1,true,false,null,0.1,-1,OP\OP,"&lt;h1&gt;test")'."\n";
+$result = 'core:/ci/DebugBacktrace.php 100 - OP\UNIT\CI->Auto("CI",0,1,true,false,null,0.1,-1,OP\OP,"&lt;h1&gt;test")'."\n";
 $ci->Set('Auto', $result, $args);
 
 //  Numerator
@@ -58,8 +58,8 @@ $ci->Set($method, $result, $args);
 
 //	...
 $method = '_file_path_padding';
-$args   = __FILE__;
-$result = 'git:asset/core/ci/DebugBacktrace.php';
+$args   = OP::MetaPath('core:/ci/DebugBacktrace.php');
+$result = 'core:/ci/DebugBacktrace.php';
 $ci->Set($method, $result, $args);
 
 //	...
