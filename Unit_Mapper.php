@@ -59,8 +59,8 @@ foreach( $units as $unit => $args ){
 	if( Unit::isInstalled($unit) ){
 		$result = "OP\UNIT\\{$unit}";
 	}else{
-	//	$name   = strtolower($unit);
-		$result = "Exception: The `{$unit}` unit is not installed.";
+		$name   = strtolower($unit);
+		$result = "Exception: This unit has not been installed: git:/asset/unit/{$name}";
 	}
 
 	//	...
