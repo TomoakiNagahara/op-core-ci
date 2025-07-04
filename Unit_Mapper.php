@@ -42,6 +42,10 @@ $units = [
 	'Database' => null,
 	'ORM'      => null,
 	'QQL'      => null,
+	'Dump'     => null,
+	'Notice'   => null,
+	'CD'       => null,
+	'Git'       => null,
 ];
 
 //	...
