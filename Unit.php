@@ -105,5 +105,10 @@ $args   = 'App';
 $result = 'OP\UNIT\App';
 $ci->Set($method, $result, $args);
 
+//	Include sub directory files.
+foreach( glob(__DIR__.'/Unit/*.php') as $path ){
+	require_once($path);
+}
+
 //	...
 return $ci->Get();
