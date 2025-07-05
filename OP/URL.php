@@ -31,3 +31,13 @@ $ci->Set($method, $result, $args);
 $args   = $app_root.'/foo/bar/';
 $result = '/foo/bar/';
 $ci->Set($method, $result, $args);
+
+//	Not document root path.
+$args   = '/etc/';
+$result = "Notice: This full path is not document root path: {$args}";
+$ci->Set($method, $result, $args);
+
+//	Does not exists path.
+$args   = '/foo/bar/hoge/';
+$result = "Notice: This full path is not document root path: {$args}";
+$ci->Set($method, $result, $args);
