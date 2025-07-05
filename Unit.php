@@ -72,6 +72,7 @@ $args   = 'Dump';
 $result = 'OP\UNIT\Dump';
 $ci->Set($method, $result, $args);
 
+/*
 //	Each unit
 $unit = [
 	'App',
@@ -96,6 +97,7 @@ foreach( $unit as $class ){
 
 	$ci->Set($method, $result, $args);
 }
+*/
 
 //	...
 $method = 'Instantiated';
