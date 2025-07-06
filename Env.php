@@ -156,16 +156,19 @@ $args   = 'self-check';
 $ci->Set('AppID', $result, $args);
 */
 
+/*
 //	AppID - Duplicate
 $result = 'Exception: AppID is already set. (CI)';
 $args   = 'self-check2';
 $ci->Set('AppID', $result, $args);
+*/
 
 //	Request
 $result = OP()->Request();
 $args   = null;
 $ci->Set('Request', $result, $args);
 
+/*
 //	Set - AdminIP
 $result = 'Notice: Set(self::_ADMIN_IP_) feature will deprecate. Set by asset:/config/admin.php file.';
 $args   = [Env::_ADMIN_IP_,'153.127.64.66'];
@@ -190,6 +193,7 @@ $ci->Set('AdminMail', $result, $args);
 $result = '';
 $args   = null;
 $ci->Set('WebServer', $result, $args);
+*/
 
 //	Include sub directory files.
 foreach( glob(__DIR__.'/Env/*.php') as $path ){
