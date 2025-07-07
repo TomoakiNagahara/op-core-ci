@@ -71,17 +71,19 @@ $ci->Set($method, $result, $args);
 
 //	Get - Key name is empty.
 $method = 'Get';
-$core   = OP::MetaPath('core:/');
-$core   = realpath($core);
+$core   = realpath( _ROOT_CORE_ );
+$line   = 130;
+$file   = $core.'/class/Config.class.php';
+$message= " null given, called in {$file} on line {$line}";
 switch( PHP_MAJOR_VERSION.PHP_MINOR_VERSION ){
 	case '74':
-		$result = 'Exception: Argument 1 passed to OP\Config::_Init() must be of the type string, null given, called in '.$core.'/class/Config.class.php on line 118';
+		$result = 'Argument 1 passed to OP\Config::_Init() must be of the type string,' . $message;
 		break;
 	default:
-		$result = 'Exception: OP\Config::_Init(): Argument #1 ($name) must be of type string, null given, called in '.$core.'/class/Config.class.php on line 118';
+		$result = 'OP\Config::_Init(): Argument #1 ($name) must be of type string,' . $message;
 }
 $args   = null;
-$ci->Set($method, $result, $args);
+$ci->Set($method, 'Exception: '.$result, $args);
 
 //	Get
 $result = "Notice: This config file does not exists: {$key}";
