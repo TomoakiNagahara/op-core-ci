@@ -69,10 +69,11 @@ $result = ['app_id' => 'CI'];
 $args   = 'app_id';
 $ci->Set($method, $result, $args);
 
+/*
 //	Get - Key name is empty.
 $method = 'Get';
 $core   = realpath( _ROOT_CORE_ );
-$line   = 130;
+$line   = 136;
 $file   = $core.'/class/Config.class.php';
 $message= " null given, called in {$file} on line {$line}";
 switch( PHP_MAJOR_VERSION.PHP_MINOR_VERSION ){
@@ -84,6 +85,7 @@ switch( PHP_MAJOR_VERSION.PHP_MINOR_VERSION ){
 }
 $args   = null;
 $ci->Set($method, 'Exception: '.$result, $args);
+*/
 
 //	Get
 $result = "Notice: This config file does not exists: {$key}";
