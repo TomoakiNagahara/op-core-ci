@@ -42,3 +42,15 @@ $ci->Set($method, $result, $args);
 $args   = '/foo/bar/hoge/';
 $result = "Notice: This full path is not document root path: doc={$doc_root}, path={$args}";
 $ci->Set($method, $result, $args);
+
+//	Full path
+$message= 'Trigger an error if the path is under the asset root.';
+$args   = __DIR__;
+$result = 'Notice: This path is the asset root path: '.__DIR__;
+$ci->Set($method, $result, $args, message: $message);
+
+//	Meta path
+$message= 'Trigger an error if the path is under the asset root.';
+$args   = 'asset:/core/ci/OP/';
+$result = 'Notice: This path is the asset root path: asset:/core/ci/OP/';
+$ci->Set($method, $result, $args, message: $message);
