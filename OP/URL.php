@@ -19,8 +19,9 @@ namespace OP;
 //	...
 $method = 'URL';
 
-//	Get app root
-$app_root = OP::MetaPath('app:/');
+//	Get root
+$doc_root = _ROOT_DOC_;
+$app_root = _ROOT_APP_;
 
 //	Meta path
 $args   = 'app:/foo/bar/';
@@ -34,10 +35,10 @@ $ci->Set($method, $result, $args);
 
 //	Not document root path.
 $args   = '/etc/';
-$result = "Notice: This full path is not document root path: {$args}";
+$result = "Notice: This full path is not document root path: doc={$doc_root}, path={$args}";
 $ci->Set($method, $result, $args);
 
 //	Does not exists path.
 $args   = '/foo/bar/hoge/';
-$result = "Notice: This full path is not document root path: {$args}";
+$result = "Notice: This full path is not document root path: doc={$doc_root}, path={$args}";
 $ci->Set($method, $result, $args);
