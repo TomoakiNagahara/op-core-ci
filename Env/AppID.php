@@ -25,6 +25,10 @@ $args   =  null;
 $ci->Set($method, $result, $args);
 
 //	Negative: Overwrite AppID
-$result = 'Exception: AppID can no longer be assigned: hoge';
+if( _OP_APP_BRANCH_ < 2030 ){
+	$result = 'Exception: AppID is already set. (CI)';
+}else{
+	$result = 'Exception: AppID can no longer be assigned: hoge';
+}
 $args   = 'hoge';
 $ci->Set($method, $result, $args);
