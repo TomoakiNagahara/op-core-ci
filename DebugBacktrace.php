@@ -24,7 +24,7 @@ $ci = OP()->Unit()->CI()->Config();
 
 //  Auto
 $backtrace  = [
-	'file'  =>  OP::MetaPath('core:/ci/DebugBacktrace.php'),
+	'file'  =>  OP::Path('core:/ci/DebugBacktrace.php'),
 	'line'  =>  100,
 	'class' => 'OP\UNIT\CI',
 	'type'  => '->',
@@ -58,7 +58,7 @@ $ci->Set($method, $result, $args);
 
 //	...
 $method = '_file_path_padding';
-$args   = OP::MetaPath('core:/ci/DebugBacktrace.php');
+$args   = OP::Path('core:/ci/DebugBacktrace.php');
 $result = 'core:/ci/DebugBacktrace.php';
 $ci->Set($method, $result, $args);
 
