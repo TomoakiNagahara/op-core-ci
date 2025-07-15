@@ -1,5 +1,5 @@
 <?php
-/**	op-core-ci:/OP/isCI.php
+/**	op-core-ci:/OP/Path.php
  *
  * @created    2025-06-23
  * @version    1.0
@@ -30,4 +30,14 @@ $ci->Set($method, $result, $args);
 //	Full path
 $args   = $app_root.'/foo/bar/';
 $result = 'app:/foo/bar/';
+$ci->Set($method, $result, $args);
+
+//	git root
+$args   = 'git:/';
+$result = _ROOT_GIT_;
+$ci->Set($method, $result, $args);
+
+//	real root
+$args   = 'real:/';
+$result = realpath(_ROOT_GIT_).'/';
 $ci->Set($method, $result, $args);
