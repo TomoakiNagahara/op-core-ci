@@ -20,7 +20,7 @@ namespace OP;
 $method = 'Path';
 
 //	Get app root
-$app_root = OP::MetaPath('app:/');
+$app_root = _ROOT_APP_;
 
 //	Meta path
 $args   = 'app:/foo/bar/';
