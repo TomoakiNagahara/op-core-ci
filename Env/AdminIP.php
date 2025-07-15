@@ -19,7 +19,9 @@ namespace OP;
 //	...
 $method = 'AdminIP';
 
+if( _OP_APP_BRANCH_ < 2030 ){
 //	...
 $result = Config::Get('admin')[Env::_ADMIN_IP_];
 $args   =  null;
 $ci->Set($method, $result, $args);
+}

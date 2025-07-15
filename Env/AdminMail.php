@@ -19,7 +19,9 @@ namespace OP;
 //	...
 $method = 'AdminMail';
 
+if( _OP_APP_BRANCH_ < 2030 ){
 //	...
 $result = Config::Get('admin')[Env::_ADMIN_MAIL_];
 $args   =  null;
 $ci->Set($method, $result, $args);
+}
