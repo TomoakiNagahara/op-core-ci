@@ -45,8 +45,8 @@ $ci->Set($method, $result, $args);
 
 //	Full path
 $message= 'Trigger an error if the path is under the asset root.';
-$args   = __DIR__;
-$result = 'Notice: This path is the asset root path: app:/asset/core/ci/OP';
+$args   = OP()->Path('asset:/');
+$result = 'Notice: This path is the asset root path: app:/asset/';
 $ci->Set($method, $result, $args, message: $message);
 
 //	Meta path
