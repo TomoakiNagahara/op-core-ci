@@ -86,17 +86,17 @@ $ci->Set('Decode', $result, $args);
 
 //	Decode - Current directory
 $args   = './README.md';
-$result = "Exception: Meta label not found. ({$args})";
+$result = "Notice: Meta label not found. ({$args})";
 $ci->Set('Decode', $result, $args);
 
 //	Decode - Upper directory
 $args   = '../index.php';
-$result = 'Exception: Upper directory cannot be specified. (../index.php)';
+$result = 'Notice: Upper directory cannot be specified. (../index.php)';
 $ci->Set('Decode', $result, $args);
 
 //	Decode - Relative by current directory.
 $args   = 'not_exist.php';
-$result = "Exception: Meta label not found. ({$args})";
+$result = "Notice: Meta label not found. ({$args})";
 $ci->Set('Decode', $result, $args);
 
 //	Decode - has query string
