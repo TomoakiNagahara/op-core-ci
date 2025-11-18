@@ -138,11 +138,6 @@ $args   = null;
 $result = 'CI';
 $ci->Set('AppID', $result, $args);
 
-//	Time
-$args   = null;
-$result = \OP\Time();
-$ci->Set('Time', $result, $args);
-
 //	Timestamp
 $args   = null;
 $result = date('Y-m-d H:i:s', \OP\Time());
