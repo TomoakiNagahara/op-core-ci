@@ -218,6 +218,8 @@ $result = null;
 $ci->Set('_set_addr', $result, $args);
 
 //	...
+$method = '_set_error';
+/*
 if( version_compare(PHP_VERSION, '8.0.0') >= 0 ){
 	// PHP version is 8.0 over.
 	$error = 'OP\EMail::_set_error(): Argument #1 ($message) must be of';
@@ -230,6 +232,9 @@ $core_path = realpath($core_path);
 $method = '_set_error';
 $result = "Exception: {$error} type string, null given, called in {$core_path} on line 50";
 $args   = null;
+*/
+$args   = '';
+$result = null;
 $ci->Set($method, $result, $args);
 
 //	...
