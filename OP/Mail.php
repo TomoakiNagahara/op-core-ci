@@ -27,5 +27,5 @@ $headers = [];
 
 //	plain text mail
 $args   = [$to, $subject, $message, $headers];
-$result = true;
+$result = OP()->Unit()->CI()->isGitHubActions() ? false: true;
 $ci->Set($method, $result, $args);
