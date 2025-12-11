@@ -139,8 +139,8 @@ if( _OP_APP_BRANCH_ < 2025 ){
 	$result    = 'Notice: Frozen time has already set.';
 }
 $args      = [
-	false,      // timezone support.
 	$timestamp, // timestamp can local timezone.
+	false,      // timezone support.
 ];
 $ci->Set('Time', $result, $args);
 
