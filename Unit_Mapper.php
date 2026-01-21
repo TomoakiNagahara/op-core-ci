@@ -47,6 +47,7 @@ $units = [
 	'CD'       => null,
 	'Git'      => null,
 	'SQL'      => null,
+	'Login'    => null,
 ];
 
 //	...
