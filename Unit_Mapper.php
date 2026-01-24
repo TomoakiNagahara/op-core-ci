@@ -32,6 +32,7 @@ $_unit_config = Config::Get('unit');
 
 //	...
 $units = [
+	'Bitcoin'  => null,
 	'App'      => null,
 	'Api'      => null,
 	'Router'   => null,
