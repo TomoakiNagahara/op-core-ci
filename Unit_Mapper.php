@@ -28,6 +28,12 @@ $result = 'OP\UNIT\App';
 $ci->Set($method, $result, $args);
 
 //	...
+$method = 'Mapping';
+$args   = 'App';
+$result = 'App';
+$ci->Set($method, $result, $args);
+
+//	...
 $_unit_config = Config::Get('unit');
 
 //	...
