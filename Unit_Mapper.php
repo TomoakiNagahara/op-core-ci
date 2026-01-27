@@ -64,9 +64,11 @@ foreach( $units as $unit => $args ){
 	$args   = $args;
 
 	//	Re:map
-	if( isset($_unit_config[$unit]) ){
-		$unit = $_unit_config[$unit];
-	}
+		$name = strtolower($unit);
+	if( $name = $_unit_config['mapping'][$name] ?? null ){
+		$instance = Unit::Instantiate($name);
+		$result   = get_class($instance);
+	}else
 
 	//	...
 	if( Unit::isInstalled($unit) ){
