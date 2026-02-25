@@ -76,7 +76,8 @@ foreach( $units as $unit => $args ){
 		$result = "OP\UNIT\\{$unit}";
 	}else{
 		$name   = strtolower($unit);
-		$result = "Exception: This unit has not been installed: git:/asset/unit/{$name}";
+		$path   = OP()->Path("asset:/unit/{$name}/index.php");
+		$result = "Exception: The `index.php` file does not exists: {$path}";
 	}
 
 	//	...
