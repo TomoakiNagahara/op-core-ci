@@ -54,6 +54,7 @@ $units = [
 	'Notice'   => null,
 	'CD'       => null,
 	'Git'      => null,
+	'Shell'    => null,
 	'SQL'      => null,
 	'Login'    => null,
 ];
