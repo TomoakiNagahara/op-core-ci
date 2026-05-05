@@ -2,11 +2,10 @@
 /**	op-core-ci:/OP/isCI.php
  *
  * @created    2025-06-23
- * @version    1.0
+ * @license    Apache-2.0
  * @package    op-core
  * @subpackage ci
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @copyright  Tomoaki Nagahara
  */
 
 /**	namespace
