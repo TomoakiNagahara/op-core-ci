@@ -53,3 +53,9 @@ $message= 'Trigger an error if the path is under the asset root.';
 $args   = 'asset:/core/ci/OP/';
 $result = 'Notice: This path is the asset root path: asset:/core/ci/OP/';
 $ci->Set($method, $result, $args, message: $message);
+
+//	Sub directory
+if( OP()->URL('app:/') === $result = '/op/skeleton/'._OP_APP_BRANCH_.'/' ){
+	$args   = 'app:/';
+	$ci->Set($method, $result, $args, message: 'Sub directory check');
+}
