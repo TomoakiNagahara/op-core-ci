@@ -44,7 +44,7 @@ $units = [
 	'Api'      => null,
 	'Router'   => null,
 	'Layout'   => null,
-	'WebPack'  => null,
+	'WebPack'  => '',
 	'Form'     => null,
 	'Validate' => null,
 	'Database' => null,
@@ -54,7 +54,7 @@ $units = [
 	'Notice'   => null,
 	'CD'       => null,
 	'Git'      => null,
-	'Shell'    => null,
+	'Shell'    => '',
 	'SQL'      => null,
 	'Login'    => null,
 ];
