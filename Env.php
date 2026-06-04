@@ -197,7 +197,7 @@ $ci->Set('WebServer', $result, $args);
 
 //	Include sub directory files.
 foreach( glob(__DIR__.'/Env/*.php') as $path ){
-	require_once($path);
+	include($path);
 }
 
 //	...
