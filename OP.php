@@ -24,7 +24,7 @@ $ci = OP()->Unit()->CI()->Config();
 
 //	Include sub directory files.
 foreach( glob(__DIR__.'/OP/*.php') as $path ){
-	require_once($path);
+	include($path);
 }
 
 //	Router
